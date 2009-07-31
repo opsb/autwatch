@@ -1,0 +1,20 @@
+<p>
+  <b>Hostname:</b>
+  <%=h @instance.hostname %>
+  
+  <%= link_to 'status', "http://#{@instance.hostname}:9000/action=getstatus" %>
+  
+  <%=h @instance.status %>
+  
+  <h2>Databases</h2>
+  <ul>
+  <% @instance.databases.keys.each do |name| %>
+  	<li><%= link_to "#{name}", instance_database_url(@instance, name) %></li>
+  <% end %>
+  </ul>
+  
+</p>
+
+
+<%= link_to 'Edit', edit_instance_path(@instance) %> |
+<%= link_to 'Back', instances_path %>
