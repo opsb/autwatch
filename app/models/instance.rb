@@ -19,7 +19,6 @@ class Instance < ActiveRecord::Base
 	  hostname.split(".")[0]
   end
   
-  
   def log_url
     action_path "grl"
   end

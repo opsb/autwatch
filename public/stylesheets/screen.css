@@ -3,23 +3,29 @@ body {
 	font-family:verdana, sans-serif;
 }
 
-h1 {
-	font-size:2em;
-	padding-bottom:10px;
+/** Headers */
+
+h1,
+h2,
+h3 {
+	padding:10px 0px 10px 0px;
 }
 
-h1 a {
-	text-decoration:none;
+h1 {
+	font-size:2em;
 }
 
 h2 {
 	font-size:1.5em;
-	padding:10px 0px 10px 0px;
 }
 
 h3 {
 	font-size:1.3em;
-	padding:10px 0px 10px 0px;	
+}
+
+/** Links */
+h1 a {
+	text-decoration:none;
 }
 
 #nav {

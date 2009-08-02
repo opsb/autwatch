@@ -8007,3 +8007,110 @@ Rendering template within layouts/application
 Rendering databases/show
   [4;36;1mInstance Load (0.8ms)[0m   [0;1mSELECT * FROM "instances" ORDER BY hostname[0m
 Completed in 1115ms (View: 794, DB: 1) | 200 OK [http://localhost/instances/2/databases/SMART]
+
+
+Processing InstancesController#show (for 127.0.0.1 at 2009-08-02 18:52:10) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/show
+  [4;35;1mInstance Load (0.8ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 801ms (View: 285, DB: 1) | 200 OK [http://localhost/instances/2/]
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2009-08-02 18:52:18) [GET]
+  Parameters: {"instance_id"=>"2", "id"=>"IC2DEV"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;35;1mInstance Load (1.1ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 2297ms (View: 2038, DB: 1) | 200 OK [http://localhost/instances/2/databases/IC2DEV]
+
+
+Processing InstancesController#show (for 127.0.0.1 at 2009-08-02 18:52:29) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/show
+  [4;35;1mInstance Load (0.7ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 310ms (View: 301, DB: 1) | 200 OK [http://localhost/instances/2]
+
+
+Processing InstancesController#index (for 127.0.0.1 at 2009-08-02 18:53:29) [GET]
+  [4;36;1mInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "instances" ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 17ms (View: 8, DB: 1) | 200 OK [http://localhost/instances]
+
+
+Processing InstancesController#show (for 127.0.0.1 at 2009-08-02 18:54:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 1) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/show
+  [4;35;1mInstance Load (0.8ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 261ms (View: 251, DB: 1) | 200 OK [http://localhost/instances/1]
+
+
+Processing InstancesController#show (for 127.0.0.1 at 2009-08-02 18:54:51) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/show
+  [4;35;1mInstance Load (0.8ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 265ms (View: 255, DB: 1) | 200 OK [http://localhost/instances/2]
+
+
+Processing InstancesController#edit (for 127.0.0.1 at 2009-08-02 18:54:54) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/edit
+  [4;35;1mInstance Load (0.9ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 17ms (View: 8, DB: 1) | 200 OK [http://localhost/instances/2/edit]
+
+
+Processing InstancesController#show (for 127.0.0.1 at 2009-08-02 18:55:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/show
+  [4;35;1mInstance Load (0.8ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 261ms (View: 252, DB: 1) | 200 OK [http://localhost/instances/2]
+
+
+Processing InstancesController#show (for 127.0.0.1 at 2009-08-02 18:55:39) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/show
+  [4;35;1mInstance Load (1.0ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 265ms (View: 256, DB: 1) | 200 OK [http://localhost/instances/2]
+
+
+Processing InstancesController#show (for 127.0.0.1 at 2009-08-02 18:56:41) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/show
+  [4;35;1mInstance Load (0.8ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 263ms (View: 252, DB: 1) | 200 OK [http://localhost/instances/2]
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2009-08-02 18:56:57) [GET]
+  Parameters: {"instance_id"=>"2", "id"=>"SMART"}
+  [4;36;1mInstance Load (0.4ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;35;1mInstance Load (0.8ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 1103ms (View: 835, DB: 1) | 200 OK [http://localhost/instances/2/databases/SMART]
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2009-08-02 23:14:58) [GET]
+  Parameters: {"instance_id"=>"2", "id"=>"SMART"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;35;1mInstance Load (0.9ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 1186ms (View: 378, DB: 1) | 200 OK [http://localhost/instances/2/databases/SMART]
