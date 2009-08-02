@@ -5,13 +5,24 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Instances: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'reset' %>
   <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'screen' %>
 </head>
 <body>
 
-<p style="color: green"><%= flash[:notice] %></p>
+<ul id="nav">
+	<%= link_to 'All', instances_path %>
+	<% Instance.all.each do |instance| %>
+	<li><%= link_to instance.name, instance_url(instance.id) %></li>
+	<% end %>
+</ul>
 
-<%= yield %>
+
+<div id="content">
+	<p style="color: green"><%= flash[:notice] %></p>
+	<%= yield %>
+</div>
 
 </body>
 </html>

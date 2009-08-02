@@ -1,6 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :instances
-
   map.resources :instances, :has_many => [:databases]
 
   # The priority is based upon order of creation: first created -> highest priority.

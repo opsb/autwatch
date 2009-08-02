@@ -1,20 +1,13 @@
-<p>
-  <b>Hostname:</b>
-  <%=h @instance.hostname %>
-  
-  <%= link_to 'status', "http://#{@instance.hostname}:9000/action=getstatus" %>
-  
-  <%=h @instance.status %>
-  
-  <h2>Databases</h2>
-  <ul>
-  <% @instance.databases.keys.each do |name| %>
-  	<li><%= link_to "#{name}", instance_database_url(@instance, name) %></li>
-  <% end %>
-  </ul>
-  
-</p>
+<h1><%=h @instance.name %></h1>
+<%= link_to 'log', @instance.log_url %> |
+<%= link_to 'status', @instance.status_url %> |
+<%= link_to 'Edit', edit_instance_path(@instance) %>  
+
+<h2>Databases</h2>
+<ul>
+	<% @instance.databases.each do |database| %>
+	<li><%= link_to "#{database.name}(#{database.documents_count})", instance_database_url(@instance.id, database.name) %></li>
+	<% end %>
+</ul>
 
 
-<%= link_to 'Edit', edit_instance_path(@instance) %> |
-<%= link_to 'Back', instances_path %>

@@ -1,3 +1,8 @@
-<%= link_to @instance.hostname, instance_url(@instance) %>
-<h2><%=h @database.name %></h2>
-<%= link_to 'list', @database.list_url %>
+<h1><%= link_to("#{@instance.hostname}", instance_url(@instance.id)) %><%= " > #{@database.name}" %></h1>
+Documents: <%= @database.documents_count %>
+Sections:  <%= @database.sections %>
+<%= link_to "List", @database.list_url %>
+<% @database.documents.each do |document| %>
+	<h3><%=h document.title %></h3>
+	<p><%=h document.content %></p>
+<% end %>

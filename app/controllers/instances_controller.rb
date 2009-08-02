@@ -6,7 +6,6 @@ class InstancesController < ApplicationController
 
   def show
     @instance = Instance.find(params[:id])
-    @status = @instance.status
   end
 
   def new

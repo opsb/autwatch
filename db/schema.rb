@@ -9,12 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090731120824) do
+ActiveRecord::Schema.define(:version => 20090801081752) do
 
   create_table "instances", :force => true do |t|
     t.string   "hostname"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "query_port"
+    t.integer  "index_port"
   end
 
 end

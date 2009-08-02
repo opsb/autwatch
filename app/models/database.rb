@@ -1,15 +1,29 @@
+require 'nokogiri'
+require 'ruby-debug'
+require 'open-uri'
+
 class Database
-	attr_accessor :name, :documents, :sections
+	attr_accessor :name, :documents_count, :sections
 	
-	def initialize(instance, name, documents, sections)
+	def initialize(instance, name, documents_count, sections)
 		@instance = instance;
 		@name = name
-		@documents = documents
+		@documents_count = documents_count
 		@sections = sections
 	end
 	
+	def documents
+    doc = Nokogiri::XML(open(list_url))
+	  p doc.xpath("//DOCUMENT")
+	  doc.xpath("//DOCUMENT").collect do |document|
+	    title = document.xpath('DRETITLE').text
+	    content = document.xpath('DRECONTENT').text
+	    Document.new title, content
+    end
+	end
+	
 	def list_url
-		"http://#{@instance.hostname}:9000/action=list&DatabaseMatch=#{@name}&MaxResults=30"
+	  "http://#{@instance.hostname}:#{@instance.query_port}/action=list&DatabaseMatch=#{@name}&MaxResults=30"
 	end
 	
 end

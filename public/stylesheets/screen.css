@@ -1,0 +1,49 @@
+html, 
+body {
+	font-family:verdana, sans-serif;
+}
+
+h1 {
+	font-size:2em;
+	padding-bottom:10px;
+}
+
+h1 a {
+	text-decoration:none;
+}
+
+h2 {
+	font-size:1.5em;
+	padding:10px 0px 10px 0px;
+}
+
+h3 {
+	font-size:1.3em;
+	padding:10px 0px 10px 0px;	
+}
+
+#nav {
+	background:black;
+	color:whie;
+}
+
+#nav li {
+	display:inline-block;
+}
+
+#nav a {
+	text-decoration:none;
+}
+
+#content {
+	padding:10px;
+}
+
+li {
+	margin-left:20px;
+}
+
+/** Table */
+td {
+	padding:2px;
+}
