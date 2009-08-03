@@ -23,19 +23,27 @@ class Database
 	end
 	
 	def list_url
-	  "http://#{@instance.hostname}:#{@instance.query_port}/action=list&DatabaseMatch=#{@name}&MaxResults=30"
+	  "#{query_url}/action=list&DatabaseMatch=#{@name}&MaxResults=30"
 	end
 	
 	def delete_doc_url
-	  "http://#{@instance.hostname}:#{@instance.index_port}/DREDELETEREF?Docs=[document id]"
+	  "#{index_url}/DREDELETEREF?Docs=[document id]"
   end
 
   def document_idx_url
-    "http://#{@instance.hostname}:#{@instance.query_port}/action=query&print=all&databasematch=#{name}&fieldtext=MATCH{[document id]}:DREREFERENCE"
+    "#{query_url}/action=query&print=all&databasematch=#{name}&fieldtext=MATCH{[document id]}:DREREFERENCE"
   end
 	
 	def clear
-	  open("http://#{@instance.hostname}:#{@instance.index_port}/DREDELDBASE?DREDbName=#{name}")
+	  open("#{index_url}/DREDELDBASE?DREDbName=#{name}")
   end
+  
+  private
+    def query_url
+      "http://#{@instance.hostname}:#{@instance.query_port}"
+    end
+    def index_url
+      "http://#{@instance.hostname}:#{@instance.index_port}"
+    end
 	
 end

@@ -11,7 +11,9 @@ Sections:  <%= @database.sections %>
 <h3>Delete doc</h3>
 <%=h @database.delete_doc_url %>
 
+<% if false %>
 <% @database.documents.each do |document| %>
 	<h3><%=h document.title %></h3>
 	<p><%=h document.content %></p>
+<% end %>
 <% end %>
