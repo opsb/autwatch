@@ -1,6 +1,6 @@
 require 'nokogiri'
 require 'ruby-debug'
-require 'open-uri'
+
 
 class Instance < ActiveRecord::Base
   default_scope :order => 'hostname'
@@ -31,6 +31,10 @@ class Instance < ActiveRecord::Base
   private
     def action_path action
       "http://#{hostname}:#{query_port}/action=#{action}"
+    end
+    
+       def open(url)
+    	Net::HTTP.get(URI.parse(url))
     end
 
 end

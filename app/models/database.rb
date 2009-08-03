@@ -1,6 +1,5 @@
 require 'nokogiri'
 require 'ruby-debug'
-require 'open-uri'
 
 class Database
 	attr_accessor :name, :documents_count, :sections
@@ -34,16 +33,21 @@ class Database
     "#{query_url}/action=query&print=all&databasematch=#{name}&fieldtext=MATCH{[document id]}:DREREFERENCE"
   end
 	
-	def clear
-	  open("#{index_url}/DREDELDBASE?DREDbName=#{name}")
+  def clear
+    open("#{index_url}/DREDELDBASE?DREDbName=#{name}")
   end
   
   private
     def query_url
       "http://#{@instance.hostname}:#{@instance.query_port}"
     end
+    
     def index_url
       "http://#{@instance.hostname}:#{@instance.index_port}"
+    end
+    
+    def open(url)
+    	Net::HTTP.get(URI.parse(url))
     end
 	
 end

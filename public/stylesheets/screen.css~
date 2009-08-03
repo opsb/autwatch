@@ -32,7 +32,6 @@ h3 {
 }
 
 #nav a {
-	color:white;
 	text-decoration:none;
 }
 
