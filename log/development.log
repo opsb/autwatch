@@ -8007,3 +8007,245 @@ Rendering template within layouts/application
 Rendering databases/show
   [4;36;1mInstance Load (0.8ms)[0m   [0;1mSELECT * FROM "instances" ORDER BY hostname[0m
 Completed in 1115ms (View: 794, DB: 1) | 200 OK [http://localhost/instances/2/databases/SMART]
+<<<<<<< HEAD:log/development.log
+=======
+
+
+Processing InstancesController#show (for 127.0.0.1 at 2009-08-02 18:52:10) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/show
+  [4;35;1mInstance Load (0.8ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 801ms (View: 285, DB: 1) | 200 OK [http://localhost/instances/2/]
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2009-08-02 18:52:18) [GET]
+  Parameters: {"instance_id"=>"2", "id"=>"IC2DEV"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;35;1mInstance Load (1.1ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 2297ms (View: 2038, DB: 1) | 200 OK [http://localhost/instances/2/databases/IC2DEV]
+
+
+Processing InstancesController#show (for 127.0.0.1 at 2009-08-02 18:52:29) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/show
+  [4;35;1mInstance Load (0.7ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 310ms (View: 301, DB: 1) | 200 OK [http://localhost/instances/2]
+
+
+Processing InstancesController#index (for 127.0.0.1 at 2009-08-02 18:53:29) [GET]
+  [4;36;1mInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "instances" ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 17ms (View: 8, DB: 1) | 200 OK [http://localhost/instances]
+
+
+Processing InstancesController#show (for 127.0.0.1 at 2009-08-02 18:54:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 1) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/show
+  [4;35;1mInstance Load (0.8ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 261ms (View: 251, DB: 1) | 200 OK [http://localhost/instances/1]
+
+
+Processing InstancesController#show (for 127.0.0.1 at 2009-08-02 18:54:51) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/show
+  [4;35;1mInstance Load (0.8ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 265ms (View: 255, DB: 1) | 200 OK [http://localhost/instances/2]
+
+
+Processing InstancesController#edit (for 127.0.0.1 at 2009-08-02 18:54:54) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/edit
+  [4;35;1mInstance Load (0.9ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 17ms (View: 8, DB: 1) | 200 OK [http://localhost/instances/2/edit]
+
+
+Processing InstancesController#show (for 127.0.0.1 at 2009-08-02 18:55:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/show
+  [4;35;1mInstance Load (0.8ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 261ms (View: 252, DB: 1) | 200 OK [http://localhost/instances/2]
+
+
+Processing InstancesController#show (for 127.0.0.1 at 2009-08-02 18:55:39) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/show
+  [4;35;1mInstance Load (1.0ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 265ms (View: 256, DB: 1) | 200 OK [http://localhost/instances/2]
+
+
+Processing InstancesController#show (for 127.0.0.1 at 2009-08-02 18:56:41) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/show
+  [4;35;1mInstance Load (0.8ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 263ms (View: 252, DB: 1) | 200 OK [http://localhost/instances/2]
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2009-08-02 18:56:57) [GET]
+  Parameters: {"instance_id"=>"2", "id"=>"SMART"}
+  [4;36;1mInstance Load (0.4ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;35;1mInstance Load (0.8ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 1103ms (View: 835, DB: 1) | 200 OK [http://localhost/instances/2/databases/SMART]
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2009-08-02 23:14:58) [GET]
+  Parameters: {"instance_id"=>"2", "id"=>"SMART"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;35;1mInstance Load (0.9ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 1186ms (View: 378, DB: 1) | 200 OK [http://localhost/instances/2/databases/SMART]
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2009-08-03 08:17:17) [GET]
+  Parameters: {"instance_id"=>"2", "id"=>"IC2ANIRBAN"}
+  [4;36;1mInstance Load (0.3ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering databases/show
+
+ActionView::TemplateError (undefined local variable or method `instance' for #<ActionView::Base:0x2460f1c>) on line #5 of app/views/databases/show.html.erb:
+2: Documents: <%= @database.documents_count %>
+3: Sections:  <%= @database.sections %>
+4: <%= link_to 'List', @database.list_url %>
+5: <%= link_to 'Clear', instance, :confirm => 'Are you sure?', :method => :delete %>
+6: <% @database.documents.each do |document| %>
+7: 	<h3><%=h document.title %></h3>
+8: 	<p><%=h document.content %></p>
+
+    app/views/databases/show.html.erb:5
+
+Rendered rescues/_trace (93.2ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2009-08-03 08:18:50) [GET]
+  Parameters: {"instance_id"=>"2", "id"=>"IC2ANIRBAN"}
+  [4;35;1mInstance Load (0.2ms)[0m   [0mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;36;1mInstance Load (1.3ms)[0m   [0;1mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 334ms (View: 171, DB: 2) | 200 OK [http://localhost/instances/2/databases/IC2ANIRBAN]
+
+
+Processing InstancesController#index (for 127.0.0.1 at 2009-08-03 08:18:55) [GET]
+  [4;35;1mInstance Load (0.9ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://localhost/instances]
+
+
+Processing InstancesController#show (for 127.0.0.1 at 2009-08-03 08:18:58) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mInstance Load (0.2ms)[0m   [0mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/show
+  [4;36;1mInstance Load (0.8ms)[0m   [0;1mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 234ms (View: 224, DB: 1) | 200 OK [http://localhost/instances/2]
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2009-08-03 08:19:00) [GET]
+  Parameters: {"instance_id"=>"2", "id"=>"IC2OLIVER"}
+  [4;35;1mInstance Load (0.2ms)[0m   [0mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;36;1mInstance Load (0.8ms)[0m   [0;1mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 272ms (View: 112, DB: 1) | 200 OK [http://localhost/instances/2/databases/IC2OLIVER]
+
+
+Processing DatabasesController#destroy (for 127.0.0.1 at 2009-08-03 08:19:05) [DELETE]
+  Parameters: {"authenticity_token"=>"LBQC/6UFpzhnl7uwV6ulj4daOctix6SJf0M7J2Q2w1Y=", "instance_id"=>"2", "id"=>"IC2OLIVER"}
+  [4;35;1mInstance Load (0.3ms)[0m   [0mSELECT * FROM "instances" WHERE ("instances"."id" = 2) ORDER BY hostname[0m
+Redirected to http://localhost:3000/instances
+Completed in 242ms (DB: 0) | 302 Found [http://localhost/instances/2/databases/IC2OLIVER]
+
+
+Processing InstancesController#index (for 127.0.0.1 at 2009-08-03 08:19:06) [GET]
+  [4;36;1mInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "instances" ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://localhost/instances]
+
+
+Processing InstancesController#index (for 127.0.0.1 at 2009-08-03 08:21:52) [GET]
+  [4;36;1mInstance Load (1.4ms)[0m   [0;1mSELECT * FROM "instances" ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://localhost/instances]
+
+
+Processing InstancesController#show (for 127.0.0.1 at 2009-08-03 08:21:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 1) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering instances/show
+  [4;35;1mInstance Load (1.0ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 230ms (View: 221, DB: 1) | 200 OK [http://localhost/instances/1]
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2009-08-03 08:21:56) [GET]
+  Parameters: {"instance_id"=>"1", "id"=>"IC2OLIVER"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 1) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;35;1mInstance Load (1.2ms)[0m   [0mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 273ms (View: 111, DB: 1) | 200 OK [http://localhost/instances/1/databases/IC2OLIVER]
+
+
+Processing DatabasesController#destroy (for 127.0.0.1 at 2009-08-03 08:21:59) [DELETE]
+  Parameters: {"authenticity_token"=>"LBQC/6UFpzhnl7uwV6ulj4daOctix6SJf0M7J2Q2w1Y=", "instance_id"=>"1", "id"=>"IC2OLIVER"}
+  [4;36;1mInstance Load (0.2ms)[0m   [0;1mSELECT * FROM "instances" WHERE ("instances"."id" = 1) ORDER BY hostname[0m
+Redirected to http://localhost:3000/instances/1/databases/IC2OLIVER
+Completed in 259ms (DB: 0) | 302 Found [http://localhost/instances/1/databases/IC2OLIVER]
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2009-08-03 08:21:59) [GET]
+  Parameters: {"instance_id"=>"1", "id"=>"IC2OLIVER"}
+  [4;35;1mInstance Load (0.2ms)[0m   [0mSELECT * FROM "instances" WHERE ("instances"."id" = 1) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;36;1mInstance Load (1.2ms)[0m   [0;1mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 267ms (View: 110, DB: 1) | 200 OK [http://localhost/instances/1/databases/IC2OLIVER]
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2009-08-03 08:26:32) [GET]
+  Parameters: {"instance_id"=>"1", "id"=>"IC2OLIVER"}
+  [4;35;1mInstance Load (0.2ms)[0m   [0mSELECT * FROM "instances" WHERE ("instances"."id" = 1) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;36;1mInstance Load (0.9ms)[0m   [0;1mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 267ms (View: 110, DB: 1) | 200 OK [http://localhost/instances/1/databases/IC2OLIVER]
+
+
+Processing DatabasesController#show (for 127.0.0.1 at 2009-08-03 08:26:41) [GET]
+  Parameters: {"instance_id"=>"1", "id"=>"IC2OLIVER"}
+  [4;35;1mInstance Load (0.2ms)[0m   [0mSELECT * FROM "instances" WHERE ("instances"."id" = 1) ORDER BY hostname[0m
+Rendering template within layouts/application
+Rendering databases/show
+  [4;36;1mInstance Load (1.0ms)[0m   [0;1mSELECT * FROM "instances" ORDER BY hostname[0m
+Completed in 276ms (View: 112, DB: 1) | 200 OK [http://localhost/instances/1/databases/IC2OLIVER]
+>>>>>>> 967245e... Can now clear databases from show page. A delete doc url is generated on the databases show page:log/development.log
