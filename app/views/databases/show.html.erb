@@ -3,6 +3,8 @@ Documents: <%= @database.documents_count %>
 Sections:  <%= @database.sections %>
 
 <%= link_to 'List', @database.list_url %>
+
+<h3>Clear all documents!</h3>
 <%= link_to 'Clear', instance_database_url(@instance.id, @database.name), :confirm => 'Are you sure?', :method => :delete %>
 
 <h3>Document idx</h3>
