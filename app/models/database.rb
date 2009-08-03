@@ -29,6 +29,10 @@ class Database
 	def delete_doc_url
 	  "http://#{@instance.hostname}:#{@instance.index_port}/DREDELETEREF?Docs=[document id]"
   end
+
+  def document_idx_url
+    "http://#{@instance.hostname}:#{@instance.query_port}/action=query&print=all&databasematch=#{name}&fieldtext=MATCH{[document id]}:DREREFERENCE"
+  end
 	
 	def clear
 	  open("http://#{@instance.hostname}:#{@instance.index_port}/DREDELDBASE?DREDbName=#{name}")
