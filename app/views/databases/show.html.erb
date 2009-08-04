@@ -1,17 +1,31 @@
-<h1><%= link_to("#{@instance.hostname}", instance_url(@instance.id)) %><%= " > #{@database.name}" %></h1>
-Documents: <%= @database.documents_count %>
-Sections:  <%= @database.sections %>
-
+<h1><%= link_to("#{@instance.name}", instance_url(@instance.id)) %><%= " > #{@database.name}" %></h1>
 <%= link_to 'List', @database.list_url %>
-
-<h3>Clear all documents!</h3>
 <%= link_to 'Clear', instance_database_url(@instance.id, @database.name), :confirm => 'Are you sure?', :method => :delete %>
+<h3>Stats</h3>
+<table>
+	<tr>
+		<td>Documents</td>
+		<td><%= @database.documents_count %></td>
+	</tr>
+	<tr>
+		<td>Sections</td>
+		<td><%= @database.sections %></td>
+	</tr>
+</table>
 
-<h3>Document idx</h3>
-<%=h @database.document_idx_url %>
-
-<h3>Delete doc</h3>
-<%=h @database.delete_doc_url %>
+<h3>Actions Reference</h3>
+<table>
+	<tbody>
+		<tr>
+			<td>idx</td>
+			<td><%=h @database.document_idx_url %></td>
+		</tr>
+		<tr>
+			<td>delete doc</td>
+			<td><%=h @database.delete_doc_url %></td>
+		</tr>
+	</tbody>
+</table>
 
 <% if false %>
 <% @database.documents.each do |document| %>

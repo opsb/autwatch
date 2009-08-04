@@ -12,10 +12,11 @@
 <body>
 
 <ul id="nav">
-	<%= link_to 'All', instances_path %>
+	<li><%= link_to 'All', instances_path %></li>
 	<% Instance.all.each do |instance| %>
 	<li><%= link_to instance.name, instance_url(instance.id) %></li>
 	<% end %>
+	<li class="secondary"><a href="http://dev-aut2.nl.informatm.com:9000/action=help">Help</a></li>
 </ul>
 
 

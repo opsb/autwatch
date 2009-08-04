@@ -25,10 +25,13 @@ h3 {
 #nav {
 	background:black;
 	color:whie;
+	width:100%;
+	overflow:hidden;
 }
 
 #nav li {
 	display:inline-block;
+	float:left;
 }
 
 #nav a {
@@ -36,15 +39,26 @@ h3 {
 	text-decoration:none;
 }
 
+#nav .secondary {
+	float:right;
+}
+
 #content {
 	padding:10px;
 }
 
 li {
-	margin-left:20px;
+	padding:3px 10px 3px 10px;
 }
 
 /** Table */
+table {
+	border: 1px solid #ccc;
+	background:#cceeff;
+	margin-bottom:10px
+}
+
 td {
-	padding:2px;
+	padding:5px;
+	border: 1px solid white;
 }
