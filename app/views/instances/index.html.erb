@@ -4,7 +4,7 @@
 
 <table>
 
-<% @instances.each do |instance| %>
+<% Instance.all.each do |instance| %>
   <tr>
     <td><%=h instance.hostname %></td>
     <td><%= link_to 'Show', instance %></td>
