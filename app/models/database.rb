@@ -37,17 +37,20 @@ class Database
     open("#{index_url}/DREDELDBASE?DREDbName=#{name}")
   end
   
-  private
-    def query_url
-      "http://#{@instance.hostname}:#{@instance.query_port}"
-    end
-    
-    def index_url
-      "http://#{@instance.hostname}:#{@instance.index_port}"
-    end
-    
-    def open(url)
-    	Net::HTTP.get(URI.parse(url))
-    end
+	def query_url
+	  "http://#{@instance.hostname}:#{@instance.query_port}"
+	end
+	
+	def index_url
+	  "http://#{@instance.hostname}:#{@instance.index_port}"
+	end
+	
+	def document_url(ids)
+	  "http://#{@instance.hostname}:#{@instance.query_port}/action=query&print=all&databasematch=#{name}&fieldtext=MATCH{#{ids}}:DREREFERENCE"
+	end
+	
+	def open(url)
+		Net::HTTP.get(URI.parse(url))
+	end
 	
 end

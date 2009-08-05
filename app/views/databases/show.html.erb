@@ -27,6 +27,12 @@
 	</tbody>
 </table>
 
+<% form_tag "#{@database.name}/documents", :method => "get" do -%>
+	<%= label_tag 'ids' %>
+	<%= text_field_tag 'ids' %>
+	<%= submit_tag 'Show' %>
+<% end %>
+
 <% if false %>
 <% @database.documents.each do |document| %>
 	<h3><%=h document.title %></h3>

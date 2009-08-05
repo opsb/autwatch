@@ -1,5 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :instances, :has_many => [:databases]
+
+  map.resources :instances do |instance|
+  	instance.resources :databases do |database|
+  	  database.resources :documents
+  	end
+  end
+  
+  map.connect 'instances/:instance_id/:controller/:database_name/:action'
 
   # The priority is based upon order of creation: first created -> highest priority.
 
